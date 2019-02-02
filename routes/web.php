@@ -27,9 +27,12 @@ Route::prefix('admin')->group(function () {
 
     Route::get('/login', 'Auth\LoginController@formAdminLogin');
     Route::post('/login', 'Auth\LoginController@AdminLogin');
+    Route::post('category/{type}', 'BackOffice@manageCategory');
 
     Route::middleware(['admin'])->group(function () {
         Route::get('/', 'BackOfficeController@index');
+        Route::get('/category', 'BackOfficeController@category');
+        Route::post('/addCategory', 'BackOfficeController@addCategory');
         Route::get('/profile', 'BackOfficeController@profile');
         Route::get('/logout', 'Auth\LoginController@logoutAdmin');
     });

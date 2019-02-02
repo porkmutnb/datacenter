@@ -17,6 +17,11 @@
                 <a href="{{ URL('admin/logout') }}"> Logout </a>
             </th>
         </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <a href="{{ URL('admin/category') }}"> Manage Category </a>
+            </td>
+        </tr>
     </table>
 </body>
 </html>
